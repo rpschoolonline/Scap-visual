@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCAP VISUAL</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        user-select: none;
+    }
+
+    /* NAVBAR STARTS */
+    #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #767e79;
+        height: 60px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #spac-visual {
+        list-style: none;
+        font-size: 20px;
+        font-weight: bolder;
+        background-color: #d1c4d1;
+        padding: 10px;
+        border-radius: 20px;
+        margin: auto 0px;
+
+    }
+
+    .lis {
+        list-style: none;
+        font-size: 30px;
+        padding: 10px 8px;
+        color: aliceblue;
+        text-shadow: 2px 2px 4px;
+    }
+
+    .lis:hover {
+        color: rgb(151, 204, 206);
+        transition: 1s;
+    }
+/* NAVBAR ENDS */
+
+/* CONVERTER STARTS */
+#flex-direction{
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+#history{
+    display: flex;
+    flex-direction: column;
+  width: 160px;
+  height: 100px;
+   margin: 50px auto;
+   margin-left: -150px;
+   border: 3px solid black;
+   background-color: rgb(197, 197, 197);
+   padding-left: 4px;
+   overflow-y: auto;
+}#history:hover{
+
+font-size: 19px;
+color: #AC485A;
+transition: 800ms;
+}
+
+
+#container-parent{
+display: flex;
+width: 30%;
+height: 500px;
+margin: 50px auto ;
+background-color: #9cb0a6;
+border: 20px solid rgb(46, 46, 46);
+border-radius: 10px;
+}
+#parent-cnvrt{
+ 
+    display: flex;
+    width: 70%;
+    margin: 50px auto;
+    flex-direction: column;
+    gap: 30px;
+}
+#span{
+    margin: 0px auto;
+    font-size: 35px;
+    color: whitesmoke;
+}
+#input1,#input2{
+    margin: 0px auto;
+    border: none;
+    border: 4px solid rgb(46, 46, 46);
+   border-radius: 10px;
+   padding: 0px 10px;
+   width: 80%;
+    height:25px;
+}
+
+#input-type,#result-type{
+    margin: 0px auto;
+    border: none;
+    border: 4px solid rgb(96, 105, 100);
+   border-radius: 10px;
+   padding: 4px 0px;
+   width: 89%;
+   height:30px;
+   font-weight: bolder;
+   font-family: gruppo;
+   background-color: gray;
+}
+#input-type:hover{
+    border: 4px solid navajowhite;
+    background-color: rgb(243, 168, 140);
+    transition: 1s;
+}
+#result-type:hover{
+    border: 4px solid navajowhite;
+    background-color: rgb(243, 168, 140);
+    transition: 1s;
+}
+#clear-btn,#save-inputs{
+    width: 50%;
+    margin: 0px auto;
+    padding: 5px;
+    border: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+#clear-btn{
+    width: 45%;
+    color: white;
+    background-color: rgb(12, 5, 35);
+}
+#clear-btn:hover{
+    width: 45%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+}
+#save-inputs{
+    color: rgb(0, 0, 0);
+    background-color: whitesmoke;
+}
+#save-inputs:hover{
+    color: rgb(201, 201, 201);
+    background-color: rgb(0, 0, 0);
+}
+#save-inputs{
+    color: rgb(0, 0, 0);
+    background-color: whitesmoke;
+    transition: 1s;
+}
+/* CONVERTER ENDS */
+
+    /* PASSENGER COUNTER APP STARTS */
+    #guardian {
+        margin: 200px 350px;
+        height: 500px;
+        width: 800px;
+        display: none;
+    }
+
+    #count {
+        font-size: 50px;
+        margin-right: 90px;
+        text-align: center;
+        color: rgb(60, 24, 60);
+    }
+
+    #count:hover {
+        font-size: 70px;
+        transition: 1s;
+    }
+
+    #click {
+        width: 200px;
+        height: 50px;
+        margin-left: 47px;
+        border: none;
+        border: 2px solid black;
+        font-weight: bolder;
+        background-color: antiquewhite;
+    }
+
+    #click:hover {
+        background-color: cadetblue;
+        transition: 0.5s;
+    }
+
+    #save {
+
+        width: 200px;
+        height: 50px;
+        border: none;
+        border: 2px solid black;
+        font-weight: bolder;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #save:hover {
+        background-color: cadetblue;
+        transition: 0.5s;
+    }
+
+
+    #entries {
+        font-size: 30px;
+        margin: 17px 6px;
+        color: blue;
+        margin-top: 30px;
+    }
+
+    #entries:hover {
+        font-size: 50px;
+        color: darksalmon;
+        background-color: beige;
+        border-radius: 10px;
+        padding: 0px 0px 0px 10px;
+        transition: 1s;
+    }
+
+    #clear-entries {
+        width: 200px;
+        height: 50px;
+        border: none;
+        border: 2px solid black;
+        font-weight: bolder;
+        background-color: rgb(255, 164, 164);
+    }
+
+    #clear-entries:hover {
+        background-color: cadetblue;
+        transition: 0.5s;
+    }
+
+    #clearcount {
+
+        color: rgb(255, 226, 226);
+        background-color: rgb(131, 99, 112);
+        border: none;
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    #clearcount:hover {
+        background-color: aquamarine;
+        color: black;
+        transition: 1s;
+
+    }
+
+    #low {
+
+        margin-top: 10px;
+        width: 70px;
+        height: 30px;
+        font-size: 15px;
+        border: none;
+        border: 1px solid rgb(79, 120, 255);
+        border-radius: 4px;
+        background-color: rgb(157, 155, 255);
+        color: white;
+        text-align: center;
+    }
+    /* PASSENGER COUNTER APP ENDS */
+
+    /* SNAKE WATER GUN GAME STARTS */
+    #grand-parent {
+        height: 500px;
+        width: 50%;
+        display: none;
+        margin: 100px auto;
+        background-image: linear-gradient(to left, #d3adb9, #d2b3c0, #d2b9c7, #d1becc, #d1c4d1);
+        border: 6px solid slategrey;
+        border-radius: 12px;
+    }
+
+
+    #parent {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 50px 200px;
+    }
+
+
+    #computer-score {
+        color: #2f383b;
+    }
+
+    #your-score {
+        color: #2f383b;
+    }
+
+    #start {
+        width: 60%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border: 3px solid sienna;
+        border-radius: 5px;
+        background-color: #505a59;
+        color: floralwhite;
+        
+        margin-left: 40px;
+    }
+
+    #start:hover {
+        background-color: #b7bfd4;
+        color: black;
+        border: 3px solid rgb(152, 152, 152);
+        transition: 1s;
+    }
+
+
+    #show {
+        color: bisque;
+    }
+
+
+    #win {
+        color: darkslategray;
+        margin: 0px auto;
+    }
+    /* SNAKE WATER GUN GAME ENDS */
+
+
+    /* ADD TO CART APP STARTS */
+    #container {
+        display: none;
+        flex-direction: column;
+        max-width: 320px;
+        margin: 30px auto;
+    }
+
+    img {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    #input-field {
+        color: #432000;
+        background-color: #DCE1EB;
+        border: 0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        margin: 10px 0;
+    }
+
+    #button {
+        color: #FDFDFD;
+        background-color: #AC485A;
+        border: 0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    #button:hover {
+        background-color: #432000;
+        cursor: pointer;
+    }
+
+    #clear-all {
+        margin-top: 5px;
+        color: #FDFDFD;
+        background-color: #AC485A;
+        border: 0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    #clear-all:hover {
+        background-color: #432000;
+        cursor: pointer;
+    }
+
+    #shopping-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #shopping-list li {
+        font-size: 20px;
+        background-color: #FFFDF8;
+        padding: 15px;
+        border-radius: 8px;
+        flex-grow: 1;
+        text-align: center;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+    }
+
+    #shopping-list li:hover {
+        background-color: #FFECC7;
+        cursor: pointer;
+    }
+    /* ADD TO CART APP ENDS */
+    @media (max-width: 576px) {
+            /* Navbar */
+            #navbar {
+                flex-wrap: wrap;
+            }
+
+            .lis {
+                font-size: 16px;
+            }
+
+            /* Converter */
+            #container-parent {
+                width: 90%;
+            }
+
+            /* Snake Water Gun Game */
+            #grand-parent {
+                width: 90%;
+                margin: 50px auto;
+            }
+        }
+
+        /* Medium devices (between 576px and 992px) */
+        @media (min-width: 576px) and (max-width: 992px) {
+            /* Navbar */
+            .lis {
+                font-size: 22px;
+            }
+
+            /* Converter */
+            #container-parent {
+                width: 70%;
+            }
+
+            /* Snake Water Gun Game */
+            #grand-parent {
+                width: 70%;
+                margin: 100px auto;
+            }
+        }
+
+        /* Large devices (992px and above) */
+        @media (min-width: 992px) {
+            /* Navbar */
+            .lis {
+                font-size: 30px;
+            }
+
+            /* Converter */
+            #container-parent {
+                width: 30%;
+            }
+
+            /* Snake Water Gun Game */
+            #grand-parent {
+                width: 50%;
+                margin: 100px auto;
+            }
+        }
+</style>
+
+<body>
+    <!-- navbar starts -->
+    <div id="navbar">
+        <li id="spac-visual">SCAP VISUAL</li>
+        <li class="lis" id="li-converter">CONVERTER</li>
+        <li class="lis" id="li-snakegame">SNAKE GAME</li>
+        <li class="lis" id="li-addtocart">ADD TO CART</li>
+        <li class="lis" id="li-pacnapp">PASSENGER COUNTER</li>
+    </div>
+    <!-- navbar ends -->
+
+    <!-- ADD TO CART APP STARTS -->
+    <div id="container">
+        <img src="assets/cat.png">
+        <input id="input-field" placeholder="Bread" type="text">
+        <button id="button">ADD TO CART</button>
+        <button id="clear-all">CLEAR ALL</button>
+        <ul id="shopping-list">
+        </ul>
+    </div>
+    <!-- ADD TO CART APP ENDS -->
+
+    <!-- CONVERTER STARTS -->
+    <div id="flex-direction">
+        <div id="history">
+            <div id="history-section">
+                HISTORY
+            </div>
+        </div>
+    <div id="container-parent">
+        <div id="parent-cnvrt">
+            <input type="number" id="input1">
+            <select name="" id="input-type">
+                <option value="KILOMETER">KILOMETER</option>
+                <option value="METER">METER</option>
+                <option value="CENTIMETER">CENTIMETER</option>
+                <option value="KILOMETER/HR">KILOMETER/HR</option>
+                <option value="METER/SEC">METER/SEC</option>
+                <option value="SECOND">SECOND</option>
+                <option value="MINUTE">MINUTE</option>
+                <option value="LITER">LITER</option>
+                <option value="MILI-LITER">MILI-LITER</option>
+                <option value="KILOGRAM">KILOGRAM</option>
+                <option value="GRAM">GRAM</option>
+                <option value="calculator">CALCULATOR</option>
+            </select>
+            <span id="span">=</span>
+            <input type="number" id="input2">
+            <select name="" id="result-type">
+                <option value="KILOMETER">KILOMETER</option>
+                <option value="METER">METER</option>
+                <option value="CENTIMETER">CENTIMETER</option>
+                <option value="KILOMETER/HR">KILOMETER/HR</option>
+                <option value="METER/SEC">METER/SEC</option>
+                <option value="SECOND">SECOND</option>
+                <option value="MINUTE">MINUTE</option>
+                <option value="LITER">LITER</option>
+                <option value="MILI-LITER">MILI-LITER</option>
+                <option value="KILOGRAM">KILOGRAM</option>
+                <option value="GRAM">GRAM</option>
+                <option value="calculator">CALCULATOR</option>
+            </select>
+            <button id="clear-btn">CLEAR FIELDS</button>
+            <button id="save-inputs">SAVE </button>
+        </div>
+        
+    </div>
+</div>
+    <!-- CONVERTER ENDS -->
+
+    <!-- SNAKE WATER GUN GAME STARTS -->
+    <div id="grand-parent">
+        <div id="parent">
+            <h2 id="computer-score">COMPUTER SCORE:</h2>
+            <h2 id="your-score">YOUR SCORE:</h2>
+            <h1 id="show">COMPUTER: <BR> <BR> USER:</h1>
+            <button id="start">START GAME</button>
+            <h1 id="win"></h1>
+        </div>
+    </div>
+    <!-- SNAKE WATER GUN GAME ENDS -->
+
+    <!-- PASSENGER COUNTER APP STARTS -->
+    <div id="guardian">
+        <h1 id="count">0</h1>
+        <button id="click" onclick="incremett()">CLICK TO COUNT ENTRIES</button>
+        <button id="save" onclick="savee()">CLICK TO SAVE</button>
+        <button id="clear-entries">CLEAR ENTRIES</button>
+        <button id="clearcount">TAP TO CLEAR COUNTING</button>
+        <button id="low"> -1 </button>
+        <p id="entries">ENTRIES: </p>
+    </div>
+    <!-- PASSENGER COUNTER APP ENDS -->
+
+    <script src="script.js"></script>
+</body>
+</html>
